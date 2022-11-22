@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Life of a Computer Science student
+description: A blog where I talk about my experience studying Computer Science and also show off some projects or other programming activities off.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://simonsejse.github.io/blog
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
