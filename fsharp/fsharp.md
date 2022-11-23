@@ -8,7 +8,7 @@ nav_order: 2
 ----
 
 ### Difference list
-{: .fs-4 }
+
 
 #### The power of the data structure difference list
 {: .fs-4 }
