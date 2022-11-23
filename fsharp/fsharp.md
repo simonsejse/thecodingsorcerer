@@ -26,6 +26,11 @@ let queue: Person list =
     [ { Name = "Simon" }; { Name = "Lars" }; { Name = "Peter" } ]
     @ [ { Name = "John" } ]
 ```
+{% highlight some_language %}
+let queue: Person list =
+    [ { Name = "Simon" }; { Name = "Lars" }; { Name = "Peter" } ]
+    @ [ { Name = "John" } ]
+{% endhighlight %}
 
 
 
