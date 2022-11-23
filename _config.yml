@@ -5,3 +5,20 @@ theme: just-the-docs
 url: https://simonsejse.github.io/blog
 
 color_scheme: dark
+
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
