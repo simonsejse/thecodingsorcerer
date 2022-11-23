@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Higher order functions
+title: The power of higher order functions
 parent: FSharp Component
 nav_order: 2
 ---
