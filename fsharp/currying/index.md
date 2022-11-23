@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Currying
+title: CurryingDirectory
 nav_order: 1
 has_children: true
 ---
