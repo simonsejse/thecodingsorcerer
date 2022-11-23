@@ -34,9 +34,14 @@ Well, actually no.
 
 Now let's look at an example of why. Let's say Facebook wants us to implement some sort of queue system where each newly added element is placed at the end of the queue. And let's assume facebook has around 10^9 data that we need to store in the list.
 
-We then implement the data structure with O(n) time complexity. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute, then $\frac{10^9}{10000}=100000/(60*24)=69 days$
+We then implement the data structure with O(n) time complexity. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute, then we divide the two, and get amount in minutes, and we know that there are a total of 60*24 minutes a day so we divide it by that and we get a total of 69 days it'd take. 
+
+And I can't specify how much it actually depends on the hardware of the machine. This is only an example of a computer that can handle 10000 steps/operations per minute. 
+{: .warning }
+
+
  ```math
-\frac{10^9}{10000}=100000/(60*24)=69 days
+\frac{10^9}{10000}=\frac{100000}{(60*24)}=69 days
 ```
 
 
