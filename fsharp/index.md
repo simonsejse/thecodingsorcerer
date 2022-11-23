@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UI Components
+title: FSharp Component
 nav_order: 2
 has_children: true
 ---
