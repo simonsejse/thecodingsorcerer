@@ -44,6 +44,11 @@ And I can't specify how much it actually depends on the hardware of the machine.
 \frac{10^9}{10000}=\frac{100000}{(60*24)}=69 days
 ```
 
+\begin{align}
+  x + 3y + 4z &= 2 \\
+      3y - 4z &= 5 \\
+            z &= 4
+\end{align}
 
 The reason being that when concenating the first list with three elements n=3 to the last list with only one element n=1, we have to go through each and every single element of the first list and append to the second list, which cases the operation to run in linear time O(n). Now for a list of a small size, this won't be a problem, but in computer science, we usually need a lot than one million data in a list, hence why this would be a slow process in the end. 
 
