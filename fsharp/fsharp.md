@@ -34,6 +34,11 @@ Well, actually no. The reason being that when concenating the first list with th
 
 And that's where the difference list comes into play. The difference list can queue elements at the end in constant time O(1). Hence why it's very useful to use. We know that list's in F# are implemented as linked lists. So, when adding an element to the start of the list using the cons-operator `::` it takes O(1) time, hence why we call the opposite snoc (cons spelled from behind is snoc) since it takes O(1) time to append it to the end of the queue and this is what we want to achehive with difference lists. 
 
+#### So how does a difference list look like
 
+The difference list itself is fairly simply to implement. It's essentially just a mapping from an alpha list to an alpha list or rather a function that takes an alpha list as parameter, and returns an alpha list once invoked. 
+```fsharp
+type 'a dlist = 'a list -> 'a list
+```
 
 
