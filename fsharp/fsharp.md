@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buttons
+title: Higher order functions
 parent: FSharp Component
 nav_order: 2
 ---
