@@ -35,6 +35,9 @@ Well, actually no.
 Now let's look at an example of why. Let's say Facebook wants us to implement some sort of queue system where each newly added element is placed at the end of the queue. And let's assume facebook has around 10^9 data that we need to store in the list.
 
 We then implement the data structure with O(n) time complexity. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute, then $\frac{10^9}{10000}=100000/(60*24)=69 days$
+ ```math
+\frac{10^9}{10000}=100000/(60*24)=69 days
+```
 
 
 The reason being that when concenating the first list with three elements n=3 to the last list with only one element n=1, we have to go through each and every single element of the first list and append to the second list, which cases the operation to run in linear time O(n). Now for a list of a small size, this won't be a problem, but in computer science, we usually need a lot than one million data in a list, hence why this would be a slow process in the end. 
