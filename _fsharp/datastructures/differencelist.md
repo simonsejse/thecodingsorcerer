@@ -4,6 +4,7 @@ title: Difference List
 nav_order: 1
 mathjax: true
 parent: Data Structures
+grand_parent: FSharp
 tags: 
   - latex
   - math
