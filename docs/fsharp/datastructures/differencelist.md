@@ -54,7 +54,7 @@ $$
 \end{equation}
 $$
 
-#### How come it's so slow?
+#### **How come it's so slow?**
 {: .fs-5 }
 
 ```fsharp
