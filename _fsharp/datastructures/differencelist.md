@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Difference List
-parent: Data Structures
 nav_order: 1
 mathjax: true
 tags: 
