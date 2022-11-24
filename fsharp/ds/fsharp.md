@@ -2,11 +2,11 @@
 ---
 layout: default
 title: Data structure - difference list
-parent: Data structures
-nav_order: 2
+parent: Buttons
+grand_parent: FSharp
+nav_order: 1
 ---
 
-----
 
 # Difference list
 
