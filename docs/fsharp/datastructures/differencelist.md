@@ -20,6 +20,11 @@ tags:
 
 #### What is the use case for the data structure difference list
 {: .fs-5 }
+{: .fw-700 }
+
+#### What is the use case for the data structure difference list
+{: .fs-5 }
+
 
 We all know the importance of data structures in programming, and how their use case can help write more efficient and in general better code.
 
