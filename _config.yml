@@ -29,5 +29,5 @@ callouts:
     title: Warning
     color: red
   console:
-    title: Consoleoutput
+    title: Console output
     color: pink
