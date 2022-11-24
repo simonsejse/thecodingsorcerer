@@ -7,7 +7,7 @@ nav_order: 2
 
 ----
 
-### Difference list
+# Difference list
 
 
 #### What is the use case for the data structure difference list
