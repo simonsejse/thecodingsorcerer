@@ -82,7 +82,7 @@ printfn "fromDiffList: %A" (fromDiffList testfromDiffList)
 > fromDiffList: [3]
 //Here you notice 3 is baked into the list this is essentially the "magic"
 ```
-> {: .console }
+{: .console }
 fromDiffList: [3]
 
 Here you notice 3 is baked into the list this is essentially the "magic"
