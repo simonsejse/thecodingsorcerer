@@ -44,9 +44,6 @@ And I can't specify the importance of how much it actually depends on the hardwa
 {: .warning }
 
 
-
-$$\frac{10^9}{10000}=\frac{100000}{(60*24)}=69 days$$
-
 $$
 \begin{equation}
 \int_0^x \sin(x) dx
@@ -54,7 +51,7 @@ $$
 \end{equation}
 $$
 
-#### **How come it's so slow?**
+#### How come it's so slow?
 {: .fs-5 }
 
 ```fsharp
