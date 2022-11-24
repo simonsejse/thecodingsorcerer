@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: Data structure - difference list
