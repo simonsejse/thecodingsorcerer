@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Difference list
-parent: FSharp
-has_children: true
+title: Difference List
+parent: Data Structures
+grand_parent: FSharp
 nav_order: 1
 ---
 
