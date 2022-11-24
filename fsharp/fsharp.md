@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The power of difference list
+title: Data structure - difference list
 parent: FSharp Component
 nav_order: 2
 ---
