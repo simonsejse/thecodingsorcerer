@@ -81,7 +81,7 @@ let testfromDiffList (lst: int list) : int list = 3 :: lst
 printfn "fromDiffList: » %A" (fromDiffList testfromDiffList)
 
  +-+-+-+-+-+-+-+ +-+-+-+-+-+-+
- |C|O|N|S|O|L|E| |O|U|T|P|U|T|
+ |CONSOLE OUTPUT             |
  +-+-+-+-+-+-+-+ +-+-+-+-+-+-+                                   
   
 //Prints fromDiffList: » [3] here you notice 3 is baked into the list this is essentially the "magic"
