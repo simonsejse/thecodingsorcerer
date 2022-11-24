@@ -28,3 +28,6 @@ callouts:
   warning:
     title: Warning
     color: red
+  console:
+    title: Console output
+    color: pink
