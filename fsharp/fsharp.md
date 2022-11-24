@@ -11,7 +11,7 @@ nav_order: 2
 
 
 #### What is the use case for the data structure difference list
-{: .fs-4 }
+{: .fs-5 }
 
 We all know the importance of data structures in programming, and how their use case can help write more efficient and in general better code.
 
@@ -41,7 +41,7 @@ And I can't specify the importance of how much it actually depends on the hardwa
 ```
 
 #### How come it's so slow?
-{: .fs-4 }
+{: .fs-5 }
 
 ```fsharp
 type Person = { Name: string }
@@ -62,7 +62,7 @@ We know that list's in F# are implemented as linked lists. So, when adding an el
 And this is why we want to try and implement the difference list. 
 
 #### So how does a difference list look like
-{: .fs-4 }
+{: .fs-5 }
 
 The difference list itself is fairly simply to implement. It's essentially just a mapping from an alpha list to an alpha list or rather a function that takes an alpha list as parameter, and returns an alpha list once invoked. 
 ```fsharp
