@@ -74,13 +74,6 @@ let toDifferenceList (list1: 'a list) = (@) list1 //O(1) time complexity
 let fromDifferenceListToCons (list: 'a dlist) = list [] //O(n) time complexity
 let testfromDiffList (lst: int list) : int list = 3 :: lst
 printfn "fromDiffList: %A" (fromDiffList testfromDiffList)
-
- +-+-+-+-+-+-+-+ +-+-+-+-+-+-+
- |      CONSOLE OUTPUT       |
- +-+-+-+-+-+-+-+ +-+-+-+-+-+-+                                   
-  
-> fromDiffList: [3]
-//Here you notice 3 is baked into the list this is essentially the "magic"
 ```
 {: .console }
 fromDiffList: [3]
