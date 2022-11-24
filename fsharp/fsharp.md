@@ -84,7 +84,8 @@ printfn "fromDiffList: » %A" (fromDiffList testfromDiffList)
  |      CONSOLE OUTPUT       |
  +-+-+-+-+-+-+-+ +-+-+-+-+-+-+                                   
   
-//Prints fromDiffList: » [3] here you notice 3 is baked into the list this is essentially the "magic"
+fromDiffList: » [3]
+//Here you notice 3 is baked into the list this is essentially the "magic"
 ```
 
 
