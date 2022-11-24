@@ -22,10 +22,6 @@ tags:
 {: .fs-5 }
 {: .fw-700 }
 
-#### What is the use case for the data structure difference list
-{: .fs-5 }
-
-
 We all know the importance of data structures in programming, and how their use case can help write more efficient and in general better code.
 
 Data structures are important in programming, and their use can make code more efficient and in general better.
@@ -58,6 +54,7 @@ $$
 
 #### How come it's so slow?
 {: .fs-5 }
+{: .fw-700 }
 
 ```fsharp
 type Person = { Name: string }
@@ -79,6 +76,7 @@ And this is why we want to try and implement the difference list.
 
 #### So how does a difference list look like
 {: .fs-5 }
+{: .fw-700 }
 
 The difference list itself is fairly simply to implement. It's essentially just a mapping from an alpha list to an alpha list or rather a function that takes an alpha list as parameter, and returns an alpha list once invoked. 
 ```fsharp
