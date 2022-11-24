@@ -15,19 +15,23 @@ nav_order: 2
 
 We all know the importance of data structures in programming, and how their use case can help write more efficient and in general better code.
 
-Now what is a difference list, and what is the purpose of it?
+Data structures are important in programming, and their use can make code more efficient and in general better.
+
+So what exactly is a difference list, and what is its purpose?
 
 
-So let's assume we have been given the task to create some sort of queue system for some restaurent. Now a queue just like in real life essentially means that whenever a new element or a person is being added to the queue, the element/person is going to be placed at the end of the queue. 
+Suppose we were given the task of creating a queue system for a restaurant. Just like in real life, a queue simply means that whenever a new element or person is added to it, the item/person will be placed last in the queue. 
 
 
-In F# we could easily implement this using the `@` operator, which is a function that takes `list1` and `list2` and concatenates the two lists. So in this case, we could concetenate the current list to the new element and we would wind up having the new person at the end of the list, and we've achieved to create a queue, right?
+A comparison of the two lists can be easily accomplished in F# using the `@` operator, which takes two lists and concatenates them. 
 
-Well, actually no.
+If we concatenated the existing list to the new element, we would wind up with the new person at the end, achieving the same thing as creating a queue. So we're basically just done right, and no need to go further into processing. Well, actually no.
 
-Now let's look at an example of why. Let's say Facebook wants us to implement some sort of queue system where each newly added element is placed at the end of the queue. And let's assume facebook has around 10^9 data that we need to store in the list.
+Here's an example of why. Assume Facebook wants us to implement a queue system that places newly added elements at the end. We'll just pretend that Facebook has around 10^9th elements that gets stored in our queue. 
 
-We then implement the data structure with O(n) time complexity. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute, then we divide the two, and get amount in minutes, and we know that there are a total of 60*24 minutes a day so we divide it by that and we get a total of 69 days it'd take. 
+A data structure with O(n) complexity is then implemented. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute.
+
+Now we divide the amount of operations our steps in total with operations per minute, and we get the amount of time it'd take in minutes. So assuming it had a O(n) time complexity, and O(10^9) we essentially divide the two 10^9/10000 and to get the total time in days we know that there are a total of 60*24 minutes in a day so we also divide the result by that, and we get 69 days in total I'd take to compute this.
 
 And I can't specify the importance of how much it actually depends on the hardware of the machine. This is only an example of a computer that can handle 10000 steps/operations per minute. 
 {: .warning }
