@@ -3,6 +3,7 @@ layout: default
 title: Difference List
 nav_order: 1
 mathjax: true
+parent: Data Structures
 tags: 
   - latex
   - math
