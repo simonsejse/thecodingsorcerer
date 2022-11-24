@@ -6,11 +6,11 @@ url: https://simonsejse.github.io/blog
 
 color_scheme: dark
 
-compress_html: 
+compress_html:
   blanklines: true
 
 # LaTeX rendering via "katex" (KaTeX, default) or "mathjax" (MathJax) or "none" / "off" (NO rendering)
-latex: katex
+latex: mathjax
 
 callouts_level: quiet # or loud
 callouts:
