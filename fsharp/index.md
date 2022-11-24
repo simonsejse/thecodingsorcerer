@@ -1,5 +1,5 @@
 ---
 layout: default
-title: FSharp Component
+title: FSharp
 has_children: true
 ---
