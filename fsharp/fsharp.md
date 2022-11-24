@@ -64,6 +64,10 @@ And this is why we want to try and implement the difference list.
 The difference list itself is fairly simply to implement. It's essentially just a mapping from an alpha list to an alpha list or rather a function that takes an alpha list as parameter, and returns an alpha list once invoked. 
 ```fsharp
 type 'a dlist = 'a list -> 'a list
+
+//Create a difference list
+//(@) list1 list2
+let toDifferenceList (list1: 'a list) = (@) list1
 ```
 
 
