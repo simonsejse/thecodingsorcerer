@@ -38,7 +38,7 @@ Here's an example of why. Suppose we were given the task of creating a queue sys
 
 A data structure with O(n) complexity is then implemented. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute.
 
-Now we divide the amount of operations our steps in total with operations per minute, and we get the amount of time it'd take in minutes. So assuming it had a O(n) time complexity, and O(10^9) we essentially divide the two 10^9/10000 and to get the total time in days we know that there are a total of 60*24 minutes in a day so we also divide the result by that, and we get 69 days in total it would take to compute this. Hence, not a good practice to use the concatenation operator when we're dealing with lists that are of large sizes.
+Now we divide the amount of operations our steps in total with operations per minute, and we get the amount of time it'd take in minutes. So assuming it had a O(n) time complexity, and O($$10^9$$) we essentially divide the two 10^9/10000 and to get the total time in days we know that there are a total of 60*24 minutes in a day so we also divide the result by that, and we get 69 days in total it would take to compute this. Hence, not a good practice to use the concatenation operator when we're dealing with lists that are of large sizes. Look in \eqref{eq:calculatingTimeExample} for clarity.
 
 And I can't specify the importance of how much it actually depends on the hardware of the machine. This is only an example of a computer that can handle 10000 steps/operations per minute. 
 {: .warning }
@@ -46,8 +46,8 @@ And I can't specify the importance of how much it actually depends on the hardwa
 
 $$
 \begin{equation}
-\int_0^x \sin(x) dx
-\label{eq:test}
+\frac{10^9}{10000} = 100000\ minutes\ \Leftrightarrow \lfloor \frac{10^5}{60 \cdot 24} \rfloor = 69\ days
+\label{eq:calculatingTimeExample}
 \end{equation}
 $$
 
