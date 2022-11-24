@@ -14,15 +14,15 @@ mathjax:
   config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
 
 collections:
-  fsharp:
+  programming:
     permalink: "/:collection/:path/"
     output: true
  
 
 just_the_docs:
   collections:
-    fsharp:
-      name: Tests
+    programming:
+      name: Programmering
       
 callouts_level: quiet # or loud
 callouts:
