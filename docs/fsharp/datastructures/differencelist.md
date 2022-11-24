@@ -116,3 +116,7 @@ let cons (x: 'a) dl = append (single x) dl // = append (single x) dl
 let snoc' (x: 'a) dl = snoc dl x // arguments flipped
 ```
 
+#### The function single
+{: .fs-5 }
+{: .fw-700 }
+So, the function `single` takes a parameter `x` of type `'a` and returns an intermediate function that that a parameter of an alpha list, `'a list` and this intermediate function returns the elementet added to the front of the list using cons operator, `x :: ys`. This function uses currying, since we want the single function to return a difference list, we just supply it with a parameter `x` and leave out the parameter `ys` in the intermediate function since we then will have `x` baked in. We use partial application to only supply the first parameter `x` which is baked in, and then it returns a function that takes a parameter `'a list` and returns `x :: ys` which is also of type `'a list` so now we actually see that the intermediate functions is a mapping of `'a list -> 'a list` which is how we defined our difference list. So, the function single essentially just returns a difference list with the one element, `x` baked in.
