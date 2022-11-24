@@ -3,7 +3,7 @@ layout: default
 title: Difference List
 parent: Data Structures
 grand_parent: FSharp
-nav_order: 3
+nav_order: 1
 ---
 
 # Difference list
