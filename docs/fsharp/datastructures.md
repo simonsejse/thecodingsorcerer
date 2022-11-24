@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Structures
-parent: FSharpDirectory
+parent: FSharp
 nav_order: 2
 has_children: true
 ---
