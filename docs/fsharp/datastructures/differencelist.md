@@ -97,3 +97,26 @@ Here you notice 3 is baked into the list this is essentially the "magic".
 
 Now what exactly is the magic you might think. The magic is baking the alpha list `'a list` into the intermediate function, and then once it's invoked with the parameters of an empty cons list `[]` it takes constant time, $$O(1)$$, since it's already baked into the function and doesn't need any extra operation steps. We'll try to dig a bit deeper, if this seems totally off, and you have no clue what's going on, you should read my blog post about [Currying in FSharp]([another-page](https://simonsejse.github.io/blog/docs/fsharp/currying.html).
 
+So we've now seen how a difference list is defined, as a function that takes a generic cons list of type 'a and returns an intermediate function that returns a list of a cons list of the generic type 'a. Pheew...
+
+We've also looked at how to create a difference list, and also how to go back to a cons list.
+
+Now we take a look at adding elements.
+```fsharp
+// single x ~ [x] 
+//This returns a difference list with that single element in it 
+let single (x: 'a) = fun (ys: 'a list) -> x :: ys
+
+let append = (<<)
+
+//Normal cons
+let cons (x: 'a) dl = append (single x) dl // = append (single x) dl
+// append dl dl' ~ xs @ xs' if dl ~ xs and dl' ~ xs'
+
+let snoc' (x: 'a) dl = snoc dl x // arguments flipped
+```
+
+\begin{lstlisting}
+$ dotnet fsi proofMapIsHigherOrderFunction.fsx
+["SIMON"; "ER"; "FLOT"]
+\end{lstlisting}
