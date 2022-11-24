@@ -12,11 +12,8 @@ compress_html:
 # LaTeX rendering via "katex" (KaTeX, default) or "mathjax" (MathJax) or "none" / "off" (NO rendering)
 latex: katex
 
-
+callouts_level: quiet # or loud
 callouts:
-  warning:
-    title: Warning
-    color: red
   highlight:
     color: yellow
   important:
@@ -28,3 +25,6 @@ callouts:
   note:
     title: Note
     color: purple
+  warning:
+    title: Warning
+    color: red
