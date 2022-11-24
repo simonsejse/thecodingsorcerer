@@ -22,7 +22,7 @@ collections:
 just_the_docs:
   collections:
     programming:
-      name: Programmering
+      name: Programming
       
 callouts_level: quiet # or loud
 callouts:
