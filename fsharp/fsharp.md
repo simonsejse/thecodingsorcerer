@@ -73,7 +73,7 @@ type 'a dlist = 'a list -> 'a list
 let toDifferenceList (list1: 'a list) = (@) list1 //O(1) time complexity
 
 //return normal cons list
-let fromDifferenceListToCons (list: dlist) = list [] //O(n) time complexity
+let fromDifferenceListToCons (list: 'a dlist) = list [] //O(n) time complexity
 
 
 let testfromDiffList (lst: int list) : int list = 3 :: lst
