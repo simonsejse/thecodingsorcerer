@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Catenable Lists
-nav_order: 1
+nav_order: 2
 mathjax: true
 parent: Data Structures
 grand_parent: FSharp
