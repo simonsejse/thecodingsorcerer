@@ -35,9 +35,9 @@ And I can't specify the importance of how much it actually depends on the hardwa
 {: .warning }
 
 
- ```math
-\frac{10^9}{10000}=\frac{100000}{(60*24)}=69 days
-```
+
+$$\frac{10^9}{10000}=\frac{100000}{(60*24)}=69 days$$
+
 
 #### How come it's so slow?
 {: .fs-5 }
