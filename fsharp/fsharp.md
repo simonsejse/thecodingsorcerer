@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data structure - difference list
-parent: FSharp
+parent: Data structures
 nav_order: 2
 ---
 
