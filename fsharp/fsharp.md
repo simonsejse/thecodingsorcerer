@@ -36,7 +36,7 @@ Now let's look at an example of why. Let's say Facebook wants us to implement so
 
 We then implement the data structure with O(n) time complexity. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute, then we divide the two, and get amount in minutes, and we know that there are a total of 60*24 minutes a day so we divide it by that and we get a total of 69 days it'd take. 
 
-And I can't specify how much it actually depends on the hardware of the machine. This is only an example of a computer that can handle 10000 steps/operations per minute. 
+And I can't specify the importance of how much it actually depends on the hardware of the machine. This is only an example of a computer that can handle 10000 steps/operations per minute. 
 {: .warning }
 
 
