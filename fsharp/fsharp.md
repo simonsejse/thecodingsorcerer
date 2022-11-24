@@ -71,6 +71,12 @@ type 'a dlist = 'a list -> 'a list
 //Create a difference list
 //(@) list1 list2
 let toDifferenceList (list1: 'a list) = (@) list1
+
+let testfromDiffList (lst: int list) : int list = 3 :: lst
+
+printfn "fromDiffList: » %A" (fromDiffList testfromDiffList)
+
+//Prints fromDiffList: » [3] here you notice 3 is baked into the list this is essentially the "magic"
 ```
 
 
