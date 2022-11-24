@@ -95,7 +95,7 @@ printfn "fromDiffList: %A" (fromDiffList testfromDiffList)
 
 Here you notice 3 is baked into the list this is essentially the "magic". 
 
-Now what exactly is the magic you might think. The magic is baking the alpha list `'a list` into the intermediate function, and then once it's invoked with the parameters of an empty cons list `[]` it takes constant time, $$O(1)$$, since it's already baked into the function and doesn't need any extra operation steps. We'll try to dig a bit deeper, if this seems totally off, and you have no clue what's going on, you should read my blog post about [Currying in FSharp]([another-page](https://simonsejse.github.io/blog/docs/fsharp/currying.html).
+Now what exactly is the magic you might think. The magic is baking the alpha list `'a list` into the intermediate function, and then once it's invoked with the parameters of an empty cons list `[]` it takes constant time, $$O(1)$$, since it's already baked into the function and doesn't need any extra operation steps. We'll try to dig a bit deeper, if this seems totally off, and you have no clue what's going on, you should read my blog post about [Currying in FSharp](https://simonsejse.github.io/blog/docs/fsharp/currying.html).
 
 So we've now seen how a difference list is defined, as a function that takes a generic cons list of type 'a and returns an intermediate function that returns a list of a cons list of the generic type 'a. Pheew...
 
