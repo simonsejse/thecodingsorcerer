@@ -13,18 +13,17 @@ mathjax:
   source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
   config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
 
-<! -- We create the collection here -->
 collections:
   fsharp:
     permalink: "/:collection/:path/"
     output: true
  
-<! -- We define the name of the collection here -->
+
 just_the_docs:
   collections:
     fsharp:
-      name: Coding
- 
+      name: Tests
+      
 callouts_level: quiet # or loud
 callouts:
   highlight:
