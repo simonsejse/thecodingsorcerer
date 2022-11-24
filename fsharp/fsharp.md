@@ -19,15 +19,14 @@ Data structures are important in programming, and their use can make code more e
 
 So what exactly is a difference list, and what is its purpose?
 
-
-Suppose we were given the task of creating a queue system for a restaurant. Just like in real life, a queue simply means that whenever a new element or person is added to it, the item/person will be placed last in the queue. 
+Just like in real life, a queue simply means that whenever a new element or person is added to it, the item/person will be placed last in the queue. 
 
 
 A comparison of the two lists can be easily accomplished in F# using the `@` operator, which takes two lists and concatenates them. 
 
 If we concatenated the existing list to the new element, we would wind up with the new person at the end, achieving the same thing as creating a queue. So we're basically just done right, and no need to go further into processing. Well, actually no.
 
-Here's an example of why. Assume Facebook wants us to implement a queue system that places newly added elements at the end. We'll just pretend that Facebook has around 10^9th elements that gets stored in our queue. 
+Here's an example of why. Suppose we were given the task of creating a queue system for Facebook in which it places the newly added elements at the end of the queue. We'll just pretend that Facebook has around 10^9th elements that already gets stored in our queue. 
 
 A data structure with O(n) complexity is then implemented. Let's make a perhaps unrealistic assumption that our computer can handle 100000 operations per minute.
 
