@@ -4,6 +4,15 @@ title: Difference List
 parent: Data Structures
 grand_parent: FSharp
 nav_order: 1
+mathjax: true
+tags: 
+  - latex
+  - math
+  - time complexity
+  - difference list
+  - dlist
+  - fsharp
+  - f#
 ---
 
 # Difference list
