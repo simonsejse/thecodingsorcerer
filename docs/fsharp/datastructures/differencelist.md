@@ -103,6 +103,9 @@ We've also looked at how to create a difference list, and also how to go back to
 
 Now we take a look at adding elements.
 ```fsharp
+$$
+\begin{equation}
+
 // single x ~ [x] 
 //This returns a difference list with that single element in it 
 let single (x: 'a) = fun (ys: 'a list) -> x :: ys
@@ -114,9 +117,9 @@ let cons (x: 'a) dl = append (single x) dl // = append (single x) dl
 // append dl dl' ~ xs @ xs' if dl ~ xs and dl' ~ xs'
 
 let snoc' (x: 'a) dl = snoc dl x // arguments flipped
+\label{eq:calculatingTimeExample}
+\end{equation}
+$$
+
 ```
 
-\begin{lstlisting}
-$ dotnet fsi proofMapIsHigherOrderFunction.fsx
-["SIMON"; "ER"; "FLOT"]
-\end{lstlisting}
