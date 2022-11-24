@@ -1,6 +1,7 @@
 title: Simon Winther
 description: A blog where I talk about my experience studying Computer Science and also show off some projects or other programming activities off.
 theme: just-the-docs
+repository: "simonsejse/blog"
 
 url: https://simonsejse.github.io/blog
 
@@ -8,9 +9,9 @@ color_scheme: dark
 
 compress_html:
   blanklines: true
-
-# LaTeX rendering via "katex" (KaTeX, default) or "mathjax" (MathJax) or "none" / "off" (NO rendering)
-latex: mathjax
+mathjax:
+  source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
+  config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
 
 callouts_level: quiet # or loud
 callouts:
