@@ -14,3 +14,24 @@ tags:
 ---
 
 # Catenable Lists
+
+#### What is the use case for the data structure difference list
+{: .fs-5 }
+{: .fw-700 }
+
+
+
+#### The fold method
+{: .fs-5 }
+{: .fw-700 }
+
+
+```fsharp
+let fold' (folder: 'a -> 'b -> 'a) (s: 'a) (l: 'b list) : 'a =
+    let rec f xs =
+        match xs with
+        | [] -> s
+        | x :: xs' -> folder (f xs') x
+
+    f l
+```
