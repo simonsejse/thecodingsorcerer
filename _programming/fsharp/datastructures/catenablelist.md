@@ -55,8 +55,12 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 
     f list
 ```
-{: .warning }
 
+
+{: .warning }
+> ```fsharp
+> //Beware: our append function automaticcaly filters "Empty" catlists out when calling append function
+> ```
 
 #### The map function based on our fold function
 {: .fs-5 }
