@@ -57,7 +57,7 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 ```
 
 
-{: .warning }
+{: .note }
 > 
 > Beware: our append function automaticcaly filters "Empty" catlists out when calling append function
 > 
