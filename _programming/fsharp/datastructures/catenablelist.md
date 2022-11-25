@@ -44,6 +44,8 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 
     f list
 ```
+{: .warning }
+
 
 #### The map function based on our fold function
 {: .fs-5 }
