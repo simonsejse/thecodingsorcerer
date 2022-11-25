@@ -27,7 +27,7 @@ tags:
 
 
 {% highlight fsharp %}
-
+```fsharp
 let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     let rec f xs =
         match xs with
@@ -36,6 +36,6 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
         | Append (ys, zs) -> fst (cf) (f ys) (f zs)
 
     f list
-
+```
 {% endhighlight %}
 
