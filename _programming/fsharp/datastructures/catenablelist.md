@@ -27,6 +27,16 @@ type 'a catlist =
 {: .fw-700 }
 
 
+#### The append method
+let append c1 c2 =
+    if c1 = Empty then c2
+    else if c2 = Empty then c1
+    else Append(c1, c2)
+    
+    
+{: .fs-5 }
+{: .fw-700 }
+but ye it makes sense, if a is empty then just returns b no matter what, and if b is empty returns a nomatter what and if they not empty then returns them both appended
 
 #### The fold method
 {: .fs-5 }
