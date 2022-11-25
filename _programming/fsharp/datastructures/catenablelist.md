@@ -38,7 +38,7 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     f list
 ```
 
-##### The map function based on our fold function
+#### The map function based on our fold function
 {: .fs-5 }
 {: .fw-700 }
 
@@ -46,3 +46,23 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
     fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
 ```
+
+#### The filter function based on our fold function
+{: .fs-5 }
+{: .fw-700 }
+
+```fsharp
+let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
+    fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
+```
+
+#### The rev function based on our fold function
+{: .fs-5 }
+{: .fw-700 }
+
+```fsharp
+let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
+    fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
+```
+
+
