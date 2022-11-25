@@ -27,13 +27,14 @@ tags:
 
 {% fsharp %}
 ```fsharp
-let fold' (folder: 'a -> 'b -> 'a) (s: 'a) (l: 'b list) : 'a =
+let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     let rec f xs =
         match xs with
-        | [] -> s
-        | x :: xs' -> folder (f xs') x
+        | Empty -> snd cf
+        | Single a -> t a
+        | Append (ys, zs) -> fst (cf) (f ys) (f zs)
 
-    f l
+    f list
 ```
 {% endhighlight %}
 
