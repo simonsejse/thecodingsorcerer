@@ -57,10 +57,6 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 ```
 
 
-{: .note }
-> 
-> Beware: our append function automaticcaly filters "Empty" catlists out when calling append function
-> 
 
 #### The map function based on our fold function
 {: .fs-5 }
@@ -79,6 +75,11 @@ let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
 let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
     fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
 ```
+
+{: .note }
+> 
+> Beware: our append function automaticcaly filters "Empty" catlists out when calling append function
+
 
 #### The rev function based on our fold function
 {: .fs-5 }
