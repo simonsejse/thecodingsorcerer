@@ -25,7 +25,7 @@ tags:
 {: .fs-5 }
 {: .fw-700 }
 
-{% highlight some_language %}
+{% fsharp %}
 ```fsharp
 let fold' (folder: 'a -> 'b -> 'a) (s: 'a) (l: 'b list) : 'a =
     let rec f xs =
