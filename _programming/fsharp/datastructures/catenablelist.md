@@ -15,6 +15,13 @@ tags:
 
 # Catenable Lists
 
+```fsharp
+type 'a catlist =
+    | Empty // empty node
+    | Single of 'a // leaf node
+    | Append of 'a catlist * 'a catlist
+```
+
 #### What is the use case for the data structure difference list
 {: .fs-5 }
 {: .fw-700 }
