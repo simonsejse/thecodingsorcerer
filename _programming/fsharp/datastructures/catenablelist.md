@@ -25,7 +25,8 @@ tags:
 {: .fs-5 }
 {: .fw-700 }
 
-{% fsharp %}
+
+{% highlight fsharp %}
 ```fsharp
 let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     let rec f xs =
