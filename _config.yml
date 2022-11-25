@@ -22,7 +22,12 @@ just_the_docs:
   collections:
     programming:
       name: Programming with
-      
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
 callouts_level: quiet # or loud
 callouts:
   highlight:
