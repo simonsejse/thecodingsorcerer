@@ -1,6 +1,7 @@
 ---
 layout: default
 title: What is buffers?
+parent: FSharp
 nav_order: 3
 tags: 
   - buffers
