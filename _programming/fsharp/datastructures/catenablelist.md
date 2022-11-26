@@ -14,12 +14,10 @@ tags:
 ---
 
 # Catenable Lists
-{: .p-1 }
-{: .m-1 }
 <hr/>
 ## Week 7
-{: .p-1 }
-{: .m-1 }
+### Week 7
+#### Week 7
 
 Catenable lists are lists with efficient (constant-time) appending, $$O(1)$$ time complexity, like difference lists, and additional
 operations. We were taught that they are widely used to implement text processing systems such as text editors, where
