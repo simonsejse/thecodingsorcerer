@@ -19,6 +19,10 @@ Catenable lists are lists with efficient (constant-time) appending, $$O(1)$$ tim
 operations. We were taught that they are widely used to implement text processing systems such as text editors, where
 characters and text fragments need to be inserted and deleted efficiently, which is why arrays holding
 the text are not used.
+
+#### What does the Catenable list look like?
+{: .fs-5 }
+{: .fw-700 }
 ```fsharp
 type 'a catlist =
     | Empty // empty node
