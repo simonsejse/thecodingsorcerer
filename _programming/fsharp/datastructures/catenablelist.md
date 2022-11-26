@@ -14,8 +14,7 @@ tags:
 ---
 
 # Catenable Lists
-{: .py-6 }
-{: .p-1 }
+{: .py-1 }
 {: .m-1 }
 ## Week 7
 {: .p-1 }
