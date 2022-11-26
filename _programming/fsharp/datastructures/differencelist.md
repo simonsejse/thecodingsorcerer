@@ -17,7 +17,24 @@ has_toc: true
 ---
 
 # Difference list
+{: .py-1 }
+{: .m-1 }
+Week 7
+{: .py-1 }
+{: .m-1 }
+{: .fs-5 }
+{: .fw-700 }
 
+<details markdown="block">
+  <summary>
+    Contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+<hr/>
 
 #### What is the use case for the data structure difference list
 {: .fs-5 }
