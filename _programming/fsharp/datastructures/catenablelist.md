@@ -14,6 +14,13 @@ tags:
 has_toc: true
 ---
 
+# Catenable Lists
+{: .py-1 }
+{: .m-1 }
+## Week 7
+{: .p-1 }
+{: .m-1 }
+
 <details markdown="block">
   <summary>
     CONTENTS
@@ -24,14 +31,6 @@ ____
 ____
 </details>
 
-
-# Catenable Lists
-{: .py-1 }
-{: .m-1 }
-## Week 7
-{: .p-1 }
-{: .m-1 }
-<hr/>
 #### What is a Catenable list?
 {: .fs-5 }
 {: .fw-700 }
