@@ -28,6 +28,8 @@ type 'a catlist =
 
 
 #### The append method
+{: .fs-5 }
+{: .fw-700 }
 ```fsharp
 let append c1 c2 =
     if c1 = Empty then c2
@@ -35,8 +37,7 @@ let append c1 c2 =
     else Append(c1, c2)
 ```
     
-{: .fs-5 }
-{: .fw-700 }
+
 but ye it makes sense, if a is empty then just returns b no matter what, and if b is empty returns a nomatter what and if they not empty then returns them both appended
 
 #### The fold method
