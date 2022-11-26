@@ -25,17 +25,38 @@ just_the_docs:
 
 callouts_level: quiet # or loud
 callouts:
+  admonition:
+    # title:
+    color: grey-lt
+  attention:
+    title: Attention
+    color: purple
+  caution:
+    title: Caution
+    color: yellow
+  danger:
+    title: Danger
+    color: red
+  error:
+    title: Error
+    color: red
   highlight:
     color: yellow
+    opacity: 0.5
+  hint:
+    title: Hint
+    color: grey-dk
   important:
     title: Important
-    color: blue
-  new:
-    title: New
     color: green
   note:
     title: Note
-    color: purple
+    color: blue
+  #   color: pink
+  #   opacity: 0.3
+  tip:
+    title: Tip
+    color: grey-dk
   warning:
     title: Warning
     color: red
