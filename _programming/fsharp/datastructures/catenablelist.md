@@ -21,7 +21,7 @@ Week 7
 {: .py-1 }
 {: .m-1 }
 {: .fs-5 }
-{: .fw-600 }
+{: .fw-700 }
 
 <details markdown="block">
   <summary>
