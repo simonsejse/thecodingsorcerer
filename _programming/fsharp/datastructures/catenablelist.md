@@ -23,12 +23,21 @@ has_toc: true
 
 <details markdown="block">
   <summary>
-    CONTENTS
+    Contents
   </summary>
 ____
 1. TOC
 {:toc}
 
+</details>
+
+<details open markdown="block">
+  <summary>
+    Contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
 </details>
 
 <hr/>
