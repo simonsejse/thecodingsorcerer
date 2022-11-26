@@ -97,9 +97,7 @@ let filter (f: 'a -> bool) (xs: 'a catlist) : 'a catlist =
 //append ~ fun a acc -> append a acc
 ```
 {: .note }
->  
 > Beware: our append function automatically filters "Empty" 'a catlists out when calling append function!
-> 
 
 
 #### The rev function based on our fold function
