@@ -1,14 +1,7 @@
 ---
 layout: default
 title: What is buffers?
-parent: FSharp
 nav_order: 3
----
-
----
-layout: default
-title: Catenable Lists
-nav_order: 2
 tags: 
   - buffers
   - what are buffers
