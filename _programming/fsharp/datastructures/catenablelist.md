@@ -63,8 +63,7 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
-    fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
+
 ```
 
 #### The filter function based on our fold function
@@ -72,8 +71,7 @@ let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
 {: .fw-700 }
 
 ```fsharp
-let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
-    fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
+
 ```
 
 {: .note }
@@ -86,8 +84,8 @@ let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
 {: .fw-700 }
 
 ```fsharp
-let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
-    fold ((fun a b -> Append(a, b)), Empty) (fun a -> single (f a)) xs
+
+
 ```
 
 
@@ -122,26 +120,13 @@ let cons (a: 'a) (c: 'a catlist) = append (single a) c
 //val snoc : 'a catlist -> 'a -> 'a catlist // snoc / postpend
 let snoc (c: 'a catlist) (a: 'a) = append c (single a)
 
-(* 7ø2 
-
-Define in an analogous fashion the function sum': int catlist -> int, which computes
-the sum of the integer values in its input. Test that is computes the correct results on carefully
-chosen inputs, including the “extremal” value nil.
-
-*)
-
 let rec sum =
     function
     | Empty -> 0
     | Single a -> a
     | Append (ys, zs) -> sum (ys) + sum (zs)
 
-
-(* 7ø3 
-
 //fold : (('a -> 'a -> 'a) * 'a) -> ('b -> 'a) -> 'b catlist -> 'a
-
-*)
 let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     let rec f xs =
         match xs with
@@ -152,34 +137,23 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     f list
 //val length: xs: catlist<'a> -> int
 let length xs = fold ((+), 0) (fun _ -> 1) xs
-(*
-    7ø4
-    Analogous to the fold-based definition of length above, define using fold, without explicit
-    recursion, the functions on catenable lists that correspond to the functions of the same names
-    on built-in cons-lists.3
+let sum' xs = fold ((+), 0) (fun b -> b) xs
 
-    val map : ('a -> 'b) -> 'a catlist -> 'b catlist
-    val filter : ('a -> bool ) -> 'a catlist -> 'a catlist
-    val rev : 'a catlist -> 'a catlist
-*)
 
 //val map : ('a -> 'b) -> 'a catlist -> 'b catlist
 let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
-    fold ((fun a b -> append a b), Empty) (fun a -> single (f a)) xs
-
-
+    fold ((append), Empty) (fun b -> single (f b)) xs
+//append ~ fun a acc -> append a acc
 
 //val filter : ('a -> bool ) -> 'a catlist -> 'a catlist
 //Beware: our append function automaticcaly filters "Empty" catlists out when calling append function
 let filter (f: 'a -> bool) (xs: 'a catlist) : 'a catlist =
-    fold ((fun a b -> append a b), Empty) (fun a -> if f a then single a else Empty) xs
+    fold ((fun a acc -> append a acc), Empty) (fun b -> if f b then single b else Empty) xs
+//append ~ fun a acc -> append a acc
 
-
-//val rev : 'a catlist -> 'a catlist
-//let rev : 'a catlist -> 'a catlist
-
-let sum' xs = fold ((+), 0) (fun b -> b) xs
-
+//let rev (c: 'a catlist) : 'a catlist =
+let rev (c: 'a catlist) : 'a catlist =
+    fold ((fun a acc -> append acc a), Empty) (fun b -> single b) c
 ```
 
 
