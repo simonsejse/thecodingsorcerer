@@ -28,7 +28,7 @@ has_toc: true
 ____
 1. TOC
 {:toc}
-____
+
 </details>
 
 <hr/>
