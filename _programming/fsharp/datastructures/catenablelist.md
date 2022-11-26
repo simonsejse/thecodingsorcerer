@@ -26,10 +26,12 @@ has_toc: true
     CONTENTS
   </summary>
 ____
-- TOC
+1 TOC
 {:toc}
 ____
 </details>
+
+<hr/>
 
 #### What is a Catenable list?
 {: .fs-5 }
