@@ -14,6 +14,8 @@ tags:
 has_toc: true
 ---
 
+{:toc}
+
 # Catenable Lists
 {: .py-1 }
 {: .m-1 }
