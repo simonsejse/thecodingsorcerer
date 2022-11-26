@@ -26,7 +26,7 @@ has_toc: true
     CONTENTS
   </summary>
 ____
-1 TOC
+1. TOC
 {:toc}
 ____
 </details>
