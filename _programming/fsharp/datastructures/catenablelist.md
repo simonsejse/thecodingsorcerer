@@ -11,6 +11,7 @@ tags:
   - clist
   - fsharp
   - f#
+has_toc: true
 ---
 
 # Catenable Lists
