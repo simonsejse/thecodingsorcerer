@@ -13,6 +13,7 @@ tags:
   - dlist
   - fsharp
   - f#
+has_toc: true
 ---
 
 # Difference list
