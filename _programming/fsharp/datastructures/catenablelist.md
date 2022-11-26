@@ -20,8 +20,8 @@ has_toc: true
 Week 7
 {: .py-1 }
 {: .m-1 }
-{: .fs-6 }
-{: .fw-400 }
+{: .fs-5 }
+{: .fw-600 }
 
 <details markdown="block">
   <summary>
