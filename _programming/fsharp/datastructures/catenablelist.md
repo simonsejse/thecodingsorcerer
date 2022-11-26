@@ -63,7 +63,10 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-
+//val map : ('a -> 'b) -> 'a catlist -> 'b catlist
+let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
+    fold ((append), Empty) (fun b -> single (f b)) xs
+//append ~ fun a acc -> append a acc
 ```
 
 #### The filter function based on our fold function
@@ -71,12 +74,14 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-
+//val filter : ('a -> bool ) -> 'a catlist -> 'a catlist
+let filter (f: 'a -> bool) (xs: 'a catlist) : 'a catlist =
+    fold ((fun a acc -> append a acc), Empty) (fun b -> if f b then single b else Empty) xs
+//append ~ fun a acc -> append a acc
 ```
-
 {: .note }
 > 
-> Beware: our append function automaticcaly filters "Empty" catlists out when calling append function
+> Beware: our append function automatically filters "Empty" 'a catlists out when calling append function!
 
 
 #### The rev function based on our fold function
@@ -84,8 +89,9 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-
-
+//let rev (c: 'a catlist) : 'a catlist =
+let rev (c: 'a catlist) : 'a catlist =
+    fold ((fun a acc -> append acc a), Empty) (fun b -> single b) c
 ```
 
 
