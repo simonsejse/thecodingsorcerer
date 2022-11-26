@@ -14,15 +14,9 @@ tags:
 ---
 
 # Catenable Lists
-dsa
 <hr/>
-{: .m-1 }
-{: .p-1 }
-
-dsadas
 ## Week 7
-### Week 7
-#### Week 7
+
 
 Catenable lists are lists with efficient (constant-time) appending, $$O(1)$$ time complexity, like difference lists, and additional
 operations. We were taught that they are widely used to implement text processing systems such as text editors, where
