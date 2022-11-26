@@ -14,7 +14,16 @@ tags:
 has_toc: true
 ---
 
+<details markdown="block">
+  <summary>
+    CONTENTS
+  </summary>
+____
+- TOC
 {:toc}
+____
+</details>
+
 
 # Catenable Lists
 {: .py-1 }
