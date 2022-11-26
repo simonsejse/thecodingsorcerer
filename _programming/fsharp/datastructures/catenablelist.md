@@ -20,16 +20,6 @@ has_toc: true
 Week 7
 {: .fs-6 }
 
-<details markdown="block">
-  <summary>
-    Contents
-  </summary>
-____
-1. TOC
-{:toc}
-
-</details>
-
 <details open markdown="block">
   <summary>
     Contents
