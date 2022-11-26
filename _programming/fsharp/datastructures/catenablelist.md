@@ -48,10 +48,7 @@ type 'a catlist =
 {: .fs-5 }
 {: .fw-700 }
 ```fsharp
-let append c1 c2 =
-    if c1 = Empty then c2
-    else if c2 = Empty then c1
-    else Append(c1, c2)
+
 ```
     
 
