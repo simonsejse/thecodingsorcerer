@@ -7,6 +7,12 @@ url: https://simonsejse.github.io/blog
 
 color_scheme: dark
 
+kramdown: 
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+  
+
 compress_html:
   blanklines: true
   ignore:
