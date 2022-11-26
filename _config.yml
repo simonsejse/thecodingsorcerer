@@ -23,7 +23,8 @@ just_the_docs:
     programming:
       name: Programming with
 
-callouts_level: quiet # or loud
+callouts_level: loud
+
 callouts:
   admonition:
     # title:
