@@ -14,6 +14,7 @@ tags:
 ---
 
 # Catenable Lists
+<hr/>
 ## Week 7
 
 Catenable lists are lists with efficient (constant-time) appending, $$O(1)$$ time complexity, like difference lists, and additional
