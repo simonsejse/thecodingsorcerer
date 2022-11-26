@@ -45,7 +45,6 @@ but ye it makes sense, if a is empty then just returns b no matter what, and if 
 {: .fw-700 }
 
 
-
 ```fsharp
 let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
     let rec f xs =
