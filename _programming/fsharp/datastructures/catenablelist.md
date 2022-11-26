@@ -17,9 +17,8 @@ has_toc: true
 # Catenable Lists
 {: .py-1 }
 {: .m-1 }
-## Week 7
-{: .p-1 }
-{: .m-1 }
+Week 7
+{: .fs-6 }
 
 <details markdown="block">
   <summary>
