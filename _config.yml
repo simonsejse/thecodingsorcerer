@@ -12,7 +12,6 @@ kramdown:
     block:
       line_numbers: true
  
- permalink: pretty
 
 compress_html:
   blanklines: true
