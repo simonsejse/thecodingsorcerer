@@ -66,7 +66,6 @@ let append (c1: 'a catlist) (c2: 'a catlist) : 'a catlist =
     if c1 = Empty then c2
     else if c2 = Empty then c1
     else Append(c1, c2)
-
 ```
     
 
@@ -211,7 +210,6 @@ let delete (i: int) (xs: 'a catlist) : 'a catlist =
         toCatList (f @ f1)
     else
         raise (System.IndexOutOfRangeException("Du har valgt et index ude for størrelsen på catlisten!"))
-
 ```
 
 
