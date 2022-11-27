@@ -12,7 +12,7 @@ kramdown:
     block:
       line_numbers: true
  
-permalink: pretty
+ permalink: pretty
 
 compress_html:
   blanklines: true
