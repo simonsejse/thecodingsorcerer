@@ -11,8 +11,8 @@ tags:
   - java
 has_toc: true
 ---
-
-# The fold method in Java
+#
+# Functional Interface in Java
 {: .py-1 }
 {: .m-1 }
 Week 7
@@ -33,7 +33,7 @@ Week 7
 <hr/>
 
 
-#### Fold method
+#### The Fold method in Java
 {: .fs-5 }
 {: .fw-700 }
 ```java
