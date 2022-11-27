@@ -2,7 +2,7 @@
 layout: default
 title: The fold method in Java
 nav_order: 2
-parent: Data Structures
+parent: Java
 tags: 
   - fold method
   - fold
