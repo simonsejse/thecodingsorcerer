@@ -43,7 +43,7 @@ public static <A, B> A fold(BiFunction<A,B,A> folder, A s, List<B> bList){
     return folder.apply(fold(folder, s, bList.subList(1, bList.size())), b);
 }
 ```
-##### Examples of how to use fold
+### Examples of how to use fold
 ```java
 Integer sum = fold((Integer::sum), 0, List.of(10, 10,20));
 
