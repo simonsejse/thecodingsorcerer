@@ -11,7 +11,8 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
-  
+ 
+permalink: pretty
 
 compress_html:
   blanklines: true
