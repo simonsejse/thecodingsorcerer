@@ -62,6 +62,10 @@ type 'a catlist =
 {: .fs-5 }
 {: .fw-700 }
 ```fsharp
+let append (c1: 'a catlist) (c2: 'a catlist) : 'a catlist =
+    if c1 = Empty then c2
+    else if c2 = Empty then c1
+    else Append(c1, c2)
 
 ```
     
@@ -74,14 +78,14 @@ but ye it makes sense, if a is empty then just returns b no matter what, and if 
 
 
 ```fsharp
-let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
-    let rec f xs =
+let fold (cf: ('a -> 'a -> 'a) * 'a) (f: 'b -> 'a) (list: 'b catlist) : 'a =
+    let rec g (xs: 'b catlist) =
         match xs with
         | Empty -> snd cf
-        | Single a -> t a
-        | Append (ys, zs) -> fst (cf) (f ys) (f zs)
+        | Single (a: 'b) -> f a
+        | Append (ys: 'b catlist, zs: 'b catlist) -> fst (cf) (g ys) (g zs)
 
-    f list
+    g list
 ```
 
 
@@ -91,7 +95,8 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-
+let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
+    fold ((append), Empty) (fun (b: 'a) -> single (f b)) xs
 //append ~ fun a acc -> append a acc
 ```
 
@@ -100,7 +105,11 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-
+let filter (f: 'a -> bool) (xs: 'a catlist) : 'a catlist =
+    fold
+        ((fun (a: 'a catlist) (acc: 'a catlist) -> append a acc), Empty)
+        (fun (b: 'a) -> if f b then single b else Empty)
+        xs
 //append ~ fun a acc -> append a acc
 ```
 
@@ -113,7 +122,8 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 {: .fw-700 }
 
 ```fsharp
-
+let rev (c: 'a catlist) : 'a catlist =
+    fold ((fun (a: 'a catlist) (acc: 'a catlist) -> append acc a), Empty) (fun (b: 'a) -> single b) c
 ```
 
 
@@ -123,6 +133,84 @@ let fold (cf: ('a -> 'a -> 'a) * 'a) (t: 'b -> 'a) (list: 'b catlist) : 'a =
 
 
 ```fsharp
+module CatList
+
+open DiffList
+
+type 'a catlist =
+    | Empty
+    | Single of 'a
+    | Append of 'a catlist * 'a catlist
+
+let nil: 'a catlist = Empty
+
+let single (elm: 'a) : 'a catlist = Single(elm)
+
+let append (c1: 'a catlist) (c2: 'a catlist) : 'a catlist =
+    if c1 = Empty then c2
+    else if c2 = Empty then c1
+    else Append(c1, c2)
+
+let cons (elm: 'a) (xs: 'a catlist) : 'a catlist = append (single elm) xs
+
+let snoc (xs: 'a catlist) (elm: 'a) : 'a catlist = append xs (single elm)
+
+let fold (cf: ('a -> 'a -> 'a) * 'a) (f: 'b -> 'a) (list: 'b catlist) : 'a =
+    let rec g (xs: 'b catlist) =
+        match xs with
+        | Empty -> snd cf
+        | Single (a: 'b) -> f a
+        | Append (ys: 'b catlist, zs: 'b catlist) -> fst (cf) (g ys) (g zs)
+
+    g list
+
+let length (xs: 'a catlist) = fold ((+), 0) (fun _ -> 1) xs
+
+let map (f: 'a -> 'b) (xs: 'a catlist) : 'b catlist =
+    fold ((append), Empty) (fun (b: 'a) -> single (f b)) xs
+
+let filter (f: 'a -> bool) (xs: 'a catlist) : 'a catlist =
+    fold
+        ((fun (a: 'a catlist) (acc: 'a catlist) -> append a acc), Empty)
+        (fun (b: 'a) -> if f b then single b else Empty)
+        xs
+
+let rev (c: 'a catlist) : 'a catlist =
+    fold ((fun (a: 'a catlist) (acc: 'a catlist) -> append acc a), Empty) (fun (b: 'a) -> single b) c
+
+let fromCatList (xs: 'a catlist) : 'a list = fold ((@), []) (fun b -> [ b ]) xs
+
+
+//val fold:folder: ('State -> 'T -> 'State) -> state : 'State -> list  : list<'T> -> 'State
+let inline (^@) s elm = append s (single elm)
+let toCatList (xs: 'a list) : 'a catlist = xs |> List.fold ((^@)) Empty
+
+let item (i: int) (xs: 'a catlist) : 'a =
+    if (i >= 0) && (i < length xs) then
+        fromCatList(xs).[i]
+    else
+        raise (System.IndexOutOfRangeException("Du har valgt et index ude for størrelsen på catlisten!"))
+
+
+let insert (i: int) (elm: 'a) (xs: 'a catlist) : 'a catlist =
+    if (i >= 0) && (i < length xs) then
+        let t = fromCatList xs
+        let f = t.[0 .. i - 1]
+        let f1 = t.[i - 1 .. t.Length]
+        let newList = f @ [ elm ] @ f1
+        toCatList newList
+    else
+        raise (System.IndexOutOfRangeException("Du har valgt et index ude for størrelsen på catlisten!"))
+
+
+let delete (i: int) (xs: 'a catlist) : 'a catlist =
+    if (i >= 0) && (i < length xs) then
+        let t = fromCatList xs
+        let f = t.[0 .. i - 2]
+        let f1 = t.[i .. t.Length]
+        toCatList (f @ f1)
+    else
+        raise (System.IndexOutOfRangeException("Du har valgt et index ude for størrelsen på catlisten!"))
 
 ```
 
