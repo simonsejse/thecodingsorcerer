@@ -59,5 +59,7 @@ public static List<Integer> incrementByOne(List<Integer> state, int a) {
 }
 List<Integer> incrementByOne = fold((Application::incrementByOne), new ArrayList<>(), List.of(10, 10,20));
 ```
+{. note }
+> Beware the functions `length` and `incrementByOne` returns `Integer` and `List<Integer` which is the state it returns. So we notice in the method `length` it does not even use the parameter a, it just increments 1 to state and returns the new state.
 
 Most of these have a running time on $$O(n)$$ time since they require to go throuch each element of the list and do something.
