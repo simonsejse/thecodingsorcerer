@@ -44,8 +44,6 @@ public static <A, B> A fold(BiFunction<A,B,A> folder, A s, List<B> bList){
 }
 ```
 ##### Examples of how to use fold
-{: .fs-5 }
-{: .fw-700 }
 ```java
 Integer sum = fold((Integer::sum), 0, List.of(10, 10,20));
 
