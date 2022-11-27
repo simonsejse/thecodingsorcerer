@@ -11,7 +11,7 @@ tags:
   - java
 has_toc: true
 ---
-#
+
 # Functional Interface in Java
 {: .py-1 }
 {: .m-1 }
