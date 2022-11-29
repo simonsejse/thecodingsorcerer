@@ -134,6 +134,12 @@ let cons (x: 'a) dl = append (single x) dl // = append (single x) dl
 let snoc' (x: 'a) dl = snoc dl x // arguments flipped
 ```
 
+#### Amortized Analysis of fromDifferenceListToCons
+{: .fs-5 }
+{: .fw-700 }
+
+Usually, using concatenation `@` takes $$O(n)$$ time, but we've shown above that when using our newly built data structure using concatenation `(@)` it runs in $$O(1)$$. So instead of spending linear time we do it in constant time, but whenever we have to convert it to a normal list, it still takes $$O(n)$$ so what's the point? It still takes $$O(n)$$ time in the end when we convert it. And this is when amortized analysis comes into play. So we might convert it into a normal list, but this does only happen once we actually need a list, whereas the other one can oocur multiple and probably many times to add difference lists together, so instead of them taking $$O(n)$$ each time, they only take $$O(1)$$time now, and then once converting it will take $$O(n)$$. But this is the asymtotic notation for the runtime, we can show that the amortized runtime of fromDifferenceListToCons is $$O(1)$$ when we do an analysis of it.
+
 #### The function single
 {: .fs-5 }
 {: .fw-700 }
