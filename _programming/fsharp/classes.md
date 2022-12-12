@@ -26,6 +26,7 @@ Week 12
 
 <hr/>
 
+
 #### Hvornår bruger man inheritance?
 {: .fs-5 }
 {: .fw-700 }
@@ -68,3 +69,8 @@ let aVehicle = vehicle 5
 let car = car 55.7
 let bike = bike 23.6
 ```
+
+
+#### (parent class, child class) or (super class, sub class) or (base class, derived class)
+{: .fs-5 }
+{: .fw-700 }
