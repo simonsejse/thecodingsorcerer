@@ -26,9 +26,11 @@ Week 12
 
 <hr/>
 
-#### Hvornår bruger man inheritance?
+## Hvornår bruger man inheritance?
 {: .fs-5 }
 {: .fw-700 }
+
+## Hvornår bruger man inheritance?
 
 ```fsharp
 type car(f: float) =
