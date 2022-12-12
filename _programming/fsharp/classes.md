@@ -60,3 +60,11 @@ type bike(_weight: float) =
     do printfn "Creating a bike object"
     member this.weight = _weight
 ```
+
+Og nu har vi opnået et hierarkisk familieskab for begge to.
+Eksempler på at instantiere kunne nu se således her ud:
+```fsharp
+let aVehicle = vehicle 5
+let car = car 55.7
+let bike = bike 23.6
+```
