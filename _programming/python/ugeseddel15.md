@@ -214,4 +214,170 @@ def make_critter_d(name, colour, hitpoints):
 ```
 
 <hr/>
+### Erklær en funktion read_critters der tager indlæser et flnavn som argument, og indlæser et antal critters fra en .csv fl or returnerer dem som en liste. Brug biblioteket csv til at indlæse flen. Start evt med følgende kode (fra ugeseddel) som bruger csv biblioteket: Filen critters.csv indeholder hundrede critters (alle med forskellige navne) som du kan teste din funktion med. Du bestemmer selv om du vil bruge tuple eller dictionary repræsentation, eller om du evt vil lave to read_critter funktioner.
+
+Det er forholdsvis simpelt, at ændre fra dictionaries til tuples og omvendt. Det er vitterligt bare kaldet fra `make_critter_d` som skal ændres til `make_critter_t` så vi har naturligvis skrevet begge implementationer herunder. 
+```python
+import csv
+
+def get_name_d(d):
+  return d['name']
+
+def get_colour_d(d):
+  return d['colour'] 
+
+def get_hit_points_d(d):
+  return d['hitpoints']
+
+def damage_d(d, x):
+  return (get_name_d(d), get_colour_d(d), get_hit_points_d(d) - x)
+
+def make_critter_d(name, colour, hitpoints):
+  return { 
+          'name': name, 
+          'colour': colour, 
+          'hitpoints': hitpoints 
+          }
+
+critters = []
+def read_critters(filename):
+  with open(filename, newline='') as csvfile:
+      critter_reader = csv.reader(csvfile)
+      for row in critter_reader:
+        critters.append(make_critter_d(row[0], row[1], row[2]))
+        
+read_critters('critters.csv')
+```
+Eller med tuples
+```python
+import csv
+
+def get_name_t(t):
+  (_,_, points) = t
+  return points 
+
+def get_colour_t(t):
+  (_,color, _) = t
+  return color 
+
+def get_hit_points_t(t):
+  (_,_, points) = t
+  return points 
+
+def damage_t(t, x):
+  return (get_name_t(t), get_colour_t(t), get_hit_points_t(t) - x)
+
+def make_critter_t(name, colour, hitpoints):
+  return (name, colour, hitpoints)
+
+critters = []
+def read_critters(filename):
+  with open(filename, newline='') as csvfile:
+      critter_reader = csv.reader(csvfile)
+      for row in critter_reader:
+        critters.append(make_critter_t(row[0], row[1], row[2]))
+        
+read_critters('critters.csv')
+```
+
+### Erklær en funktion got_colour som tager en farve og en liste af critters som argumenter, og returnerer en liste af af critters som har den givne farve. Igen bestemmer du selv, om du vil bruge tuple eller dictionary repræsentation, eller om du evt vil lave to got_colour funktioner. Brug evt. got_colour til at fnde critters som har en unik farve.
+```python
+def got_colour_dictionaries(colour, crit):
+  return list(filter(lambda c : str(get_colour_d(c)).lower() == str(colour).lower(), crit))
+  
+def got_colour_tuples(colour, crit):
+  return list(filter(lambda c : str(get_colour_t(c)).lower() == str(colour).lower(), crit))
+```
+
+Den fulde kolde:
+```python
+print("\n\n")
+
+import csv
+
+#5.a Using tuples
+def get_name_t(t):
+  (_,_, points) = t
+  return points 
+
+def get_colour_t(t):
+  (_,color, _) = t
+  return color 
+
+def get_hit_points_t(t):
+  (_,_, points) = t
+  return points 
+
+def damage_t(t, x):
+  return (get_name_t(t), get_colour_t(t), get_hit_points_t(t) - x)
+
+def make_critter_t(name, colour, hitpoints):
+  return (name, colour, hitpoints)
+
+#5.b Using dictionaries
+def get_name_d(d):
+  return d['name']
+
+def get_colour_d(d):
+  return d['colour'] 
+
+def get_hit_points_d(d):
+  return d['hitpoints']
+
+def damage_d(d, x):
+  return (get_name_d(d), get_colour_d(d), get_hit_points_d(d) - x)
+
+def make_critter_d(name, colour, hitpoints):
+  return { 
+          'name': name, 
+          'colour': colour, 
+          'hitpoints': hitpoints 
+          }
+  
+#5.c Read using dictionaries
+critters = []
+def read_critters(filename):
+  with open(filename, newline='') as csvfile:
+      critter_reader = csv.reader(csvfile)
+      for row in critter_reader:
+        critters.append(make_critter_d(row[0], row[1], row[2]))
+        
+read_critters('critters.csv')
+
+#5.d Colors using dictionaries
+def got_colour_dictionaries(colour, crit):
+  return list(filter(lambda c : str(get_colour_d(c)).lower() == str(colour).lower(), crit))
+  
+
+print(got_colour_dictionaries('pink', critters))
+
+#5.c Read using tuples
+critters = []
+def read_critters(filename):
+  with open(filename, newline='') as csvfile:
+      critter_reader = csv.reader(csvfile)
+      for row in critter_reader:
+        critters.append(make_critter_t(row[0], row[1], row[2]))
+        
+read_critters('critters.csv')
+
+
+print("\n================================\n")
+#Colors using tuples
+#5.d Colors using tuples
+def got_colour_tuples(colour, crit):
+  return list(filter(lambda c : str(get_colour_t(c)).lower() == str(colour).lower(), crit))
+  
+print(got_colour_tuples('blue', critters))
+```
+
+{: .console }
+> [{'name': 'Tommy', 'colour': 'pink', 'hitpoints': '7'}, {'name': 'Alfie', 'colour': 'pink', 'hitpoints': '3'}, {'name': 'Lolly', 'colour': 'pink', 'hitpoints': '2'}] 
+> 
+> ================================
+> 
+> [('Beanie', 'blue', '8'), ('Ralph', 'blue', '9'), ('Noodle', 'blue', '2'), ('Zeke', 'blue', '9')]
+
+<hr/>
+## Opgave 6
 
