@@ -1,14 +1,13 @@
 ---
 layout: default
-title: Functional Interface in Java
+title: My first day of learning Python
 nav_order: 2
 parent: Python
 mathjax: true
 tags: 
-  - fold method
-  - fold
-  - functional interface in java
-  - java
+  - python
+  - day one
+  - learning experience
 has_toc: true
 ---
 
