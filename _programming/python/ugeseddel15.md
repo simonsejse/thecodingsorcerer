@@ -115,7 +115,11 @@ print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være f
 
 {: .console }
 > True
+> 
 > True
+> 
 > True
+> 
 > False
+> 
 > False
