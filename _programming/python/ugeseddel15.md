@@ -84,7 +84,7 @@ print(oneToNRev(10))
 
 ## Opgave 1
 
-### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
+#### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
 ```python
 def forekomster(arr, x):
     return arr.count(x)
@@ -112,7 +112,7 @@ print(palindrom("EbbE")) #Skal være true
 print(palindrom("Ebbe")) #Skal være false
 print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være false
 ```
-### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
+#### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
 
 {: .console }
 > True
@@ -124,3 +124,30 @@ print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være f
 > False
 > 
 > False
+
+
+## Opgave 3
+
+####
+```python
+artikler_præpositioner_and_konjunktioner = ['by','for', 'in', 'and', 'or', 'because', 'a', 'an', 'the']
+apk=artikler_præpositioner_and_konjunktioner
+
+def title(title):
+    x:list[str] = title.split(' ')
+    a = ' '.join(str(e) for e in list(map(lambda t : f'{t[:1].upper()}'f'{t[1:]}' if t.lower() not in apk else t, x)))
+    return f'{a[:1].upper()}'f'{a[1:]}'
+    
+print(title("hello world!"))
+print(title("weekly exercises"))
+print(title("weekly exercises and the beautiful man"))
+print(title("and weekly exercises and the beautiful man"))
+```
+
+{: .console }
+> Hello World! 
+> 
+> Weekly Exercises 
+> 
+> Weekly Exercises and the Beautiful Man 
+> And Weekly Exercises and the Beautiful Man 
