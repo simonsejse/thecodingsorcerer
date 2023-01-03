@@ -84,8 +84,6 @@ print(oneToNRev(10))
 
 ## Opgave 1
 
-##### Øvelse 1 – Forekomster
-
 ### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
 ```python
 def forekomster(arr, x):
@@ -98,5 +96,5 @@ print(forekomster([1,2,3,4,5,1,5,4,3,2,1], 1))
 ```
 
 {: .console }
-> 2
+> 2 \n
 > 3
