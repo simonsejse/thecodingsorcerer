@@ -189,5 +189,29 @@ def damage_t(t, x):
 def make_critter_t(name, colour, hitpoints):
   return (name, colour, hitpoints)
 ```
+
+### Repræsenter critters ved hjælp af dictionaries (vi giver alle vores funktioner sufx _d for at kunne kende dem der arbejder på dictionaries). Dvs, erklær en funktion make_critter_d der bruges til at skabe critters, erklær getterfunktioner get_name_d, get_colour_d og get_hit_points_d. Tilsidst erklær en funktion damage_d der tager en critter og et antal skadespoint (et heltal) og gør skade på critteren (tæller hit points ned).
+
+```python
+def get_name_d(d):
+  return d['name']
+
+def get_colour_d(d):
+  return d['colour'] 
+
+def get_hit_points_d(d):
+  return d['hitpoints']
+
+def damage_d(d, x):
+  return (get_name_d(d), get_colour_d(d), get_hit_points_d(d) - x)
+
+def make_critter_d(name, colour, hitpoints):
+  return { 
+          'name': name, 
+          'colour': colour, 
+          'hitpoints': hitpoints 
+          }
+```
+
 <hr/>
 
