@@ -96,6 +96,26 @@ print(forekomster([1,2,3,4,5,1,5,4,3,2,1], 1))
 ```
 
 {: .console }
- > 2
- > 
- > 3
+> 2
+> 
+> 3
+
+
+## Opgave 2
+```python
+def palindrom(x:str):
+    return x[::-1] == x
+  
+print(palindrom("ebbe")) #Skal være true
+print(palindrom("malayalam")) #Skal være true
+print(palindrom("EbbE")) #Skal være true
+print(palindrom("Ebbe")) #Skal være false
+print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være false
+```
+
+{: .console }
+> True
+> True
+> True
+> False
+> False
