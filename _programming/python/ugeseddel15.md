@@ -31,4 +31,4 @@ has_toc: true
 #### The Fold method in Java
 {: .fs-5 }
 {: .fw-700 }
-
+## Løs opgave 2ø0 – 2ø3 fra ugeseddel 2g, men denne gang i Python. Kig gerne på jeres gamle besvarelser i F#.
