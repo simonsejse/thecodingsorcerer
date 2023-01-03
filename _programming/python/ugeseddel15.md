@@ -112,6 +112,7 @@ print(palindrom("EbbE")) #Skal være true
 print(palindrom("Ebbe")) #Skal være false
 print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være false
 ```
+### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
 
 {: .console }
 > True
