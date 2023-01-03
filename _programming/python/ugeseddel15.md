@@ -81,6 +81,7 @@ def oneToNRev(n):
 print(oneToNRev(10))
 ```
 
+<hr/>
 ## Opgave 1
 ### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
 ```python
@@ -127,7 +128,6 @@ print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være f
 <hr/>
 
 ## Opgave 3
-
 ### På engelsk starter alle centrale ord med store bogstaver i titler og overskrifer.Erklær en funktion, title, som tager en streng som argument og returner strengen som en titel. Fx så skal title("weekly exercises") returnere "Weekly Exercises". Hvis funktionen skal være helt korrekt, så er det kun centrale ord der skal skrives med stort. Det vil sige, at artikler, (a, an, the), præpositioner (by, for, in) og konjunktioner (and, or, because) kun skal skrives med stort hvis de er det første ord i en titel. Du bestemmer selv om du vil prøve at håndtere disse særtilfælde.
 
 
@@ -154,9 +154,10 @@ print(title("and weekly exercises and the beautiful man"))
 > Weekly Exercises and the Beautiful Man 
 > 
 > And Weekly Exercises and the Beautiful Man 
-
-## Opgave 5
-
+> 
+<hr/>
+## Opgave 4
+### Erklær en funktion only_odds som tager en List som argument og returnere en nyt List som kun indeholder de elementer som stod på ulige indeks. Fx så skal only_odds(["Jan", "Feb", "March", "April", "May"]) returnere ["Feb", "April"] og only_odds([10,20,30,40,50,60,70,80,90,100]) returnere [20,40,60,80,100].
 ```python
 def only_odds(liste):
     return liste[1::2]
@@ -169,5 +170,5 @@ print(only_odds([10,20,30,40,50,60,70,80,90,100]))
 > ['Feb', 'April']
 > 
 > [20, 40, 60, 80, 100]
-
+<hr/>
 
