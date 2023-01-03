@@ -25,10 +25,12 @@ has_toc: true
 {:toc}
 </details>
 
-<hr/>
 
+## Løs opgave 3ø0 – 3ø3 fra ugeseddel 3i, samt opgave 8ø0, 8ø2 – 8ø4 men denne gang i Python. Kig gerne på jeres gamle besvarelser i F#. Bemærk at List i Python minder mere om typen array i F#, frem for typen list.
 
-#### The Fold method in Java
-{: .fs-5 }
-{: .fw-700 }
-## Løs opgave 2ø0 – 2ø3 fra ugeseddel 2g, men denne gang i Python. Kig gerne på jeres gamle besvarelser i F#.
+### 3ø0 In the following, you are to work with different ways to create a list:
+
+#### Make an empty list, and bind it with the name lst.
+```python
+print("Hello\n")
+```
