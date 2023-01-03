@@ -83,8 +83,7 @@ print(oneToNRev(10))
 ```
 
 ## Opgave 1
-
-#### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
+### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
 ```python
 def forekomster(arr, x):
     return arr.count(x)
@@ -102,6 +101,7 @@ print(forekomster([1,2,3,4,5,1,5,4,3,2,1], 1))
 
 
 ## Opgave 2
+### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
 ```python
 def palindrom(x:str):
     return x[::-1] == x
@@ -112,7 +112,6 @@ print(palindrom("EbbE")) #Skal være true
 print(palindrom("Ebbe")) #Skal være false
 print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være false
 ```
-#### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
 
 {: .console }
 > True
@@ -128,7 +127,9 @@ print(palindrom("vi ser gammel lemlæstet sæl mellem magre siv")) #Skal være f
 
 ## Opgave 3
 
-####
+### På engelsk starter alle centrale ord med store bogstaver i titler og overskrifer.Erklær en funktion, title, som tager en streng som argument og returner strengen som en titel. Fx så skal title("weekly exercises") returnere "Weekly Exercises". Hvis funktionen skal være helt korrekt, så er det kun centrale ord der skal skrives med stort. Det vil sige, at artikler, (a, an, the), præpositioner (by, for, in) og konjunktioner (and, or, because) kun skal skrives med stort hvis de er det første ord i en titel. Du bestemmer selv om du vil prøve at håndtere disse særtilfælde.
+
+
 ```python
 artikler_præpositioner_and_konjunktioner = ['by','for', 'in', 'and', 'or', 'because', 'a', 'an', 'the']
 apk=artikler_præpositioner_and_konjunktioner
