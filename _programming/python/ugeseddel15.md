@@ -83,7 +83,6 @@ print(oneToNRev(10))
 ```
 
 ## Opgave 1
-<hr/>
 ### Erklær en funktion, forekomster, som tager to argumenter: en List arr og et potentielt element x. Funktionen skal returnere hvormange gange x forekommer i arr. Fx skal kaldet forekomster(["Napoleon", "Wellington", "Bonaparte", "Wellington"], "Wellington") returnere 2, og ligeledes skal forekomster([1,2,3,4,5,1,5,4,3,2,1], 1) returnere 3.
 ```python
 def forekomster(arr, x):
@@ -102,6 +101,7 @@ print(forekomster([1,2,3,4,5,1,5,4,3,2,1], 1))
 
 
 ## Opgave 2
+<hr/>
 ### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
 <hr/>
 ```python
@@ -155,3 +155,20 @@ print(title("and weekly exercises and the beautiful man"))
 > Weekly Exercises and the Beautiful Man 
 > 
 > And Weekly Exercises and the Beautiful Man 
+
+## Opgave 5
+
+```python
+def only_odds(liste):
+    return liste[1::2]
+  
+print(only_odds(["Jan", "Feb", "March", "April", "May"]))
+print(only_odds([10,20,30,40,50,60,70,80,90,100]))
+```
+
+{: .console }
+> ['Feb', 'April']
+> 
+> [20, 40, 60, 80, 100]
+
+
