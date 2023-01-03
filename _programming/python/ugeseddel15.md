@@ -166,5 +166,28 @@ print(only_odds([10,20,30,40,50,60,70,80,90,100]))
 > ['Feb', 'April']
 > 
 > [20, 40, 60, 80, 100]
+
+<hr/>
+## Opgave 5
+### Repræsenter critters ved hjælp af tupler (vi giver alle vores funktioner sufx _t for at kunne kende dem der arbejder på tupler). Dvs, erklær en funktion make_critter_t der bruges til at skabe critters, erklær getter-funktioner get_name_t, get_colour_t og get_hit_points_t. Tilsidst erklær en funktion damage_t der tager en critter og et antal skadespoint (et heltal) og gør skade på critteren (tæller hit points ned).
+```python
+def get_name_t(t):
+  (_,_, points) = t
+  return points 
+
+def get_colour_t(t):
+  (_,color, _) = t
+  return color 
+
+def get_hit_points_t(t):
+  (_,_, points) = t
+  return points 
+
+def damage_t(t, x):
+  return (get_name_t(t), get_colour_t(t), get_hit_points_t(t) - x)
+
+def make_critter_t(name, colour, hitpoints):
+  return (name, colour, hitpoints)
+```
 <hr/>
 
