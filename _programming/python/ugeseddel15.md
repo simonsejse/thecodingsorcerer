@@ -100,8 +100,8 @@ print(forekomster([1,2,3,4,5,1,5,4,3,2,1], 1))
 > 3
 
 
-## Opgave 2
 <hr/>
+## Opgave 2
 ### Et palindrom er et ord, som er stavet ens forfra og bagfra. Fx er "ebbe" og "malayalam" palindromer. Du må gerne antage, at der er forskel på store og små bogstaver, så fx "EbbE" er et palindrom, men "Ebbe" ikke er. Du må også gerne antage, at mellemrum hører med til stavningen, så f.eks. "vi ser gammel lemlæstet sæl mellem magre siv" ikke er et palindrom. Erklær en funktion med navn palindrom, med et argument. Funktionen skal returnere True, hvis argumentet er et palindrom, og False ellers.
 <hr/>
 ```python
