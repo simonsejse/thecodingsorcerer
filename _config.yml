@@ -5,8 +5,6 @@ repository: "simonsejse/blog"
 
 url: https://simonsejse.github.io/blog
 
-color_scheme: white
-
 kramdown: 
   syntax_highlighter_opts:
     block:
